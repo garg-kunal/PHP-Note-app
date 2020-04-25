@@ -1,0 +1,113 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<TITLE>Form</TITLE>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- script -->
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- js scripts links -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- style -->
+        <style type="text/css">
+        	#btnrow{
+        		border:2px solid #464866;
+        		border-radius: 24px;
+        		width: 310px;
+        		margin-top: 10px;
+        		float: center;
+        	}
+        	#btnlogin{
+        		float: left;
+        		width: 150px;
+        		border-radius: 25px;
+
+        	}
+        	#btnregister{
+        	border-radius: 25px;
+        		width: 150px;
+        		float: right;
+
+        	}
+        	#btnrow{
+        		box-shadow: 0px 0px 3px 7px  orange;
+        	}
+
+                body{
+                       
+                       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                       
+                       background-size: 400% 400%;
+                       animation: example 15s ease infinite;
+
+                }
+
+                @keyframes example{
+                        0%{background-position: 0% 50%;}
+                     
+                        50%{background-position: 100% 50%;}
+                      
+                        100%{background-position: 0% 50%;}
+
+                }
+                #animation1{
+                        -an
+                }
+        </style>
+        <script type="text/javascript">
+        	function main(){
+        		document.getElementById("formregister").style.display="none";
+        		document.getElementById("formlogin").style.display="block";
+        		document.getElementById("btnlogin").style.background="green";
+        		document.getElementById("btnregister").style.background="white";
+        	}
+        	function main1(){
+        		document.getElementById("formlogin").style.display="none";
+        		document.getElementById("formregister").style.display="block";
+        		document.getElementById("btnregister").style.background="green";
+        		document.getElementById("btnlogin").style.background="white";
+        	}
+        </script>
+	</head>
+	<!-- body starts here -->
+
+	<body>
+		<div class="container-fluid bg-warning" style="margin-bottom: 150px;display: none">HERE</div>
+
+		<div class="container">
+			<div class="container" >
+                <div class="container" style="border:2px solid #464866;border-radius: 15px;width: 700px;background-color: white">
+                	<div class="row justify-content-center mx-auto" id="btnrow">
+                		<button class="btn" id="btnlogin" onclick="main();">Login</button>
+                		<button class="btn" id="btnregister" onclick="main1();">Register</button>
+                	</div>
+
+                	<div class="row" style="margin-top: 40px">
+                		<div class="col-sm-6 offset-sm-3" >
+                		<div class="form-group" >
+                			<form id="formlogin" method="POST" action="login.php">
+                				<input type="text" name="email" required placeholder="Email" class="form-control" ><br>
+                				<input type="password" name="password" required placeholder="Password" class="form-control"><br>
+                				<button type="submit" class="btn btn-primary" align="right">Submit</button>
+                			</form>
+                			<form id="formregister" style="display:none">
+                				<input type="text" name="email" required placeholder="Email" class="form-control borderless"><br>
+                				<input type="password" name="password" required placeholder="Password" class="form-control"><br>
+                				<input type="text" name="username" required placeholder="Name" class="form-control"><br>
+                				<button type="submit" class="btn btn-primary" align="right">Submit</button>
+                			</form>
+                		</div>
+                	</div>
+                	</div>
+                </div>
+			</div>
+		</div>
+                <div id="animation" align="center">
+                </div>
+                 <div id="animation1" align="center">
+                </div>
+	</body>
+	</html>
